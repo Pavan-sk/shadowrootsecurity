@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShadowRoot Security — Hands-On Cybersecurity Labs &amp; Learning</title>
+
+  <!-- SEO & Social Sharing Metadata -->
+  <meta name="description" content="ShadowRoot Security — Pre-launch announcement. Hands-on cybersecurity labs for the next generation. Learn, practise, challenge, and grow.">
+  <meta name="theme-color" content="#2455D6">
+  <link rel="canonical" href="https://shadowrootsecurity.com/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://shadowrootsecurity.com/">
+  <meta property="og:title" content="ShadowRoot Security — Cybersecurity Labs &amp; Learning">
+  <meta property="og:description" content="Hands-on cybersecurity labs for the next generation. Academy in development.">
+  <meta property="og:image" content="https://shadowrootsecurity.com/assets/logo.svg">
+
+  <!-- Twitter Meta -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="ShadowRoot Security">
+  <meta name="twitter:description" content="Hands-on cybersecurity labs for the next generation. Academy in development.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+  <!-- Google Fonts: Space Grotesk & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Client Script -->
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <!-- Accessible Keyboard Skip Link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- =========================================================================
+       Minimalist Header & Navigation
+       ========================================================================= -->
+  <header class="site-header">
+    <div class="container nav-row">
+      <!-- Original Brand Logo & Wordmark -->
+      <a href="#" class="brand-link" aria-label="ShadowRoot Security — Return to Top">
+        <div class="brand-icon-wrap" aria-hidden="true">
+          <svg viewBox="0 0 64 64" width="44" height="44" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M32 6 L12 14 V30 C12 43.5 20.5 53 32 58 C43.5 53 52 43.5 52 30 V14 L32 6 Z" 
+                  fill="#FFF9ED" stroke="#2455D6" stroke-width="4" stroke-linejoin="round" />
+            <path d="M32 47 V22" stroke="#2455D6" stroke-width="3.5" stroke-linecap="round" />
+            <path d="M32 34 L22 26" stroke="#2455D6" stroke-width="3" stroke-linecap="round" />
+            <path d="M32 29 L42 22" stroke="#2455D6" stroke-width="3" stroke-linecap="round" />
+            <path d="M32 39 L24 35" stroke="#2455D6" stroke-width="2.5" stroke-linecap="round" />
+            <path d="M32 37 L39 33" stroke="#2455D6" stroke-width="2.5" stroke-linecap="round" />
+            <circle cx="32" cy="18" r="3.2" fill="#FFD447" stroke="#2455D6" stroke-width="1.5" />
+            <circle cx="21" cy="25" r="2.8" fill="#FFD447" stroke="#2455D6" stroke-width="1.5" />
+            <circle cx="43" cy="21" r="2.8" fill="#FFD447" stroke="#2455D6" stroke-width="1.5" />
+            <circle cx="23" cy="35" r="2.2" fill="#FFD447" />
+            <circle cx="40" cy="33" r="2.2" fill="#FFD447" />
+          </svg>
+        </div>
+        <div class="brand-text">
+          <span class="brand-title">ShadowRoot Security</span>
+          <span class="brand-subtitle">CYBERSECURITY LABS &amp; LEARNING</span>
+        </div>
+      </a>
+
+      <!-- Mobile Hamburger Toggle -->
+      <button class="mobile-toggle" id="mobile-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+
+      <!-- Navigation Menu -->
+      <nav id="nav-menu">
+        <ul class="nav-menu">
+          <li><a href="#" class="nav-link is-active" aria-current="page">Home</a></li>
+          <li><button type="button" class="nav-link" id="nav-about-btn">About</button></li>
+          <li><button type="button" class="nav-link" id="nav-contact-btn">Contact</button></li>
+          <li>
+            <button type="button" class="nav-badge-pill" id="nav-status-btn">
+              Coming Soon
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       Main Content: Centered Hero & Original Visual Illustration
+       ========================================================================= -->
+  <main id="main-content" class="hero-section">
+    <div class="container hero-content">
+      <!-- Status Pill -->
+      <div class="status-pill">
+        <span class="status-dot" aria-hidden="true"></span>
+        <span>ACADEMY IN DEVELOPMENT</span>
+      </div>
+
+      <!-- Main Headline -->
+      <h1 class="hero-headline">
+        ShadowRoot Security
+      </h1>
+
+      <!-- Supporting Tagline -->
+      <p class="hero-tagline">
+        Hands-on cybersecurity labs for the next generation.
+      </p>
+
+      <!-- Short Supporting Line -->
+      <p class="hero-subline">
+        <span>Learn</span>
+        <span class="subline-dot" aria-hidden="true">•</span>
+        <span>Practise</span>
+        <span class="subline-dot" aria-hidden="true">•</span>
+        <span>Challenge</span>
+        <span class="subline-dot" aria-hidden="true">•</span>
+        <span>Grow</span>
+      </p>
+
+      <!-- Primary Call-to-Action -->
+      <button type="button" class="cta-button" id="hero-cta-btn" aria-haspopup="dialog">
+        <span>Stay Updated</span>
+        <span class="cta-arrow" aria-hidden="true">→</span>
+      </button>
+
+      <!-- Domain Indicator -->
+      <div class="hero-domain">
+        shadowrootsecurity.com
+      </div>
+    </div>
+
+    <!-- Original Visual Vector Illustration (Panoramic, Elevated Focal Point) -->
+    <div class="hero-illustration-wrap" aria-hidden="true">
+      <svg class="hero-vector-svg" viewBox="0 0 1400 560" preserveAspectRatio="xMidYMid meet" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <!-- Faint Technical Background Grid -->
+          <pattern id="bg-tech-grid" width="48" height="48" patternUnits="userSpaceOnUse">
+            <path d="M 48 0 L 0 0 0 48" fill="none" stroke="#DED5C3" stroke-width="0.5" stroke-dasharray="2 3" opacity="0.65" />
+          </pattern>
+
+          <!-- Sun Yellow Disc Radial Glow -->
+          <radialGradient id="sun-glow" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#FFD447" stop-opacity="0.95" />
+            <stop offset="50%" stop-color="#FFD447" stop-opacity="0.65" />
+            <stop offset="85%" stop-color="#FFEBB0" stop-opacity="0.25" />
+            <stop offset="100%" stop-color="#F3EBDD" stop-opacity="0" />
+          </radialGradient>
+
+          <!-- Sun Disc Warm Aura -->
+          <radialGradient id="sun-aura" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#FFECA3" stop-opacity="0.8" />
+            <stop offset="70%" stop-color="#FFD447" stop-opacity="0.2" />
+            <stop offset="100%" stop-color="#F3EBDD" stop-opacity="0" />
+          </radialGradient>
+
+          <!-- Portal Ambient Warm Halo Glow -->
+          <radialGradient id="portal-ambient-glow" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#FFEAA0" stop-opacity="0.65" />
+            <stop offset="45%" stop-color="#FFD447" stop-opacity="0.28" />
+            <stop offset="80%" stop-color="#F3EBDD" stop-opacity="0.06" />
+            <stop offset="100%" stop-color="#F3EBDD" stop-opacity="0" />
+          </radialGradient>
+
+          <!-- Portal Interior Radiant Sunlight -->
+          <radialGradient id="portal-light" cx="50%" cy="70%" r="55%">
+            <stop offset="0%" stop-color="#FFFFFF" stop-opacity="1" />
+            <stop offset="35%" stop-color="#FFFDF7" stop-opacity="0.98" />
+            <stop offset="65%" stop-color="#FFE788" stop-opacity="0.9" />
+            <stop offset="88%" stop-color="#FFD447" stop-opacity="0.75" />
+            <stop offset="100%" stop-color="#F2C738" stop-opacity="0.5" />
+          </radialGradient>
+
+          <!-- Central Cobalt Pathway Gradient -->
+          <linearGradient id="path-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="#183D9E" />
+            <stop offset="50%" stop-color="#2455D6" />
+            <stop offset="100%" stop-color="#1B42AC" />
+          </linearGradient>
+
+          <!-- Mountain & Dune Gradients -->
+          <linearGradient id="mountain-grad-1" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#F0E8D7" />
+            <stop offset="60%" stop-color="#E2D6C0" />
+            <stop offset="100%" stop-color="#CFC1A6" />
+          </linearGradient>
+          <linearGradient id="mountain-grad-2" x1="100%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="#EBE2CF" />
+            <stop offset="50%" stop-color="#DDD0B8" />
+            <stop offset="100%" stop-color="#CBBCA0" />
+          </linearGradient>
+          <linearGradient id="mountain-blue-shadow" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#1E44AA" stop-opacity="0.85" />
+            <stop offset="100%" stop-color="#122A6E" stop-opacity="0.9" />
+          </linearGradient>
+        </defs>
+
+        <!-- 0. Faint Geometric Technical Background -->
+        <rect width="1400" height="480" fill="url(#bg-tech-grid)" opacity="0.7" />
+
+        <!-- Fine Ambient Background Grid Traces -->
+        <g stroke="#D5CCB9" stroke-width="0.8" stroke-dasharray="3 4">
+          <line x1="80" y1="20" x2="80" y2="340" />
+          <line x1="1320" y1="20" x2="1320" y2="340" />
+          <line x1="280" y1="20" x2="280" y2="200" />
+          <line x1="1120" y1="20" x2="1120" y2="200" />
+        </g>
+
+        <!-- 1. Background Sun Disc in Upper Right -->
+        <g class="sun-pulse">
+          <circle cx="1180" cy="130" r="180" fill="url(#sun-aura)" />
+          <circle cx="1180" cy="130" r="135" fill="url(#sun-glow)" />
+          <circle cx="1180" cy="130" r="95" fill="#FFD447" fill-opacity="0.5" />
+          <path d="M 1030 180 Q 1120 155 1260 160 Q 1320 185 1380 195" stroke="#FFEAA0" stroke-width="2" fill="none" opacity="0.6" />
+        </g>
+
+        <!-- Subtle Ambient Radial Sun-Yellow Glow behind Portal -->
+        <circle cx="700" cy="220" r="230" fill="url(#portal-ambient-glow)" />
+
+        <!-- 2. Distant Soft Mountain Ridges -->
+        <path d="M 0 320 Q 320 260 620 285 T 1180 270 Q 1290 290 1400 310 V 440 H 0 Z" fill="#E8DEC9" />
+        <path d="M 0 340 Q 380 280 700 305 Q 1040 290 1400 340 V 440 H 0 Z" fill="#DFCFA6" />
+
+        <!-- 3. Left Monolithic Architecture & Sharp Faceted Mountains -->
+        <polygon points="0,200 120,140 170,170 170,420 0,420" fill="#E2D7C2" />
+        <polygon points="120,140 170,170 170,420 120,420" fill="#CBBBA1" />
+        <polygon points="0,320 90,260 160,310 140,420 0,420" fill="url(#mountain-blue-shadow)" />
+        <polygon points="90,260 160,310 120,420 90,420" fill="#2C5FDC" />
+        <line x1="90" y1="260" x2="160" y2="310" stroke="#FFD447" stroke-width="1.8" />
+
+        <polygon points="40,180 160,130 230,160 230,420 40,420" fill="#F4EBDC" />
+        <polygon points="160,130 230,160 230,420 160,420" fill="#D3C3A8" />
+        <polygon points="120,250 240,190 310,230 310,420 120,420" fill="#EDE4D2" />
+        <polygon points="240,190 310,230 310,420 240,420" fill="#C4B396" />
+        <polygon points="220,300 380,220 470,300 470,420 220,420" fill="url(#mountain-grad-1)" />
+
+        <!-- 4. Right Mountain Ridges & Sunlit Dunes -->
+        <polygon points="930,280 1140,180 1400,220 1400,420 930,420" fill="url(#mountain-grad-2)" />
+        <polygon points="930,280 1080,230 1140,180 1050,420 930,420" fill="#F3EAD9" />
+        <polygon points="1220,310 1320,260 1400,300 1400,420 1220,420" fill="url(#mountain-blue-shadow)" />
+        <polygon points="1320,260 1400,300 1370,420 1320,420" fill="#2C5FDC" />
+        <line x1="1320" y1="260" x2="1400" y2="300" stroke="#FFD447" stroke-width="1.5" />
+        <polygon points="820,320 1020,270 1240,330 1240,420 820,420" fill="#DCCFB6" />
+
+        <!-- 5. Technical Accent Data Nodes & Square Markers -->
+        <rect x="42" y="80" width="8" height="8" fill="#2455D6" />
+        <circle cx="46" cy="84" r="1.5" fill="#FFD447" />
+        <line x1="46" y1="88" x2="46" y2="220" stroke="#C2B6A0" stroke-width="1" stroke-dasharray="2 3" />
+        <rect x="210" y="160" width="7" height="7" fill="#2455D6" />
+        <line x1="213" y1="167" x2="213" y2="300" stroke="#C2B6A0" stroke-width="0.8" stroke-dasharray="2 3" />
+        <rect x="870" y="220" width="8" height="8" fill="#2455D6" />
+        <circle cx="874" cy="224" r="1.5" fill="#FFD447" />
+        <rect x="1320" y="80" width="7" height="7" fill="#FFD447" />
+        <circle cx="1323" cy="83" r="1.5" fill="#2455D6" />
+        <line x1="1323" y1="87" x2="1323" y2="260" stroke="#C2B6A0" stroke-width="0.8" stroke-dasharray="2 3" />
+
+        <!-- 6. Foreground Stepped Ground Plane -->
+        <path d="M 0 400 Q 350 380 600 400 L 800 400 Q 1050 380 1400 400 V 560 H 0 Z" fill="#E8DEC9" />
+        <line x1="0" y1="400" x2="560" y2="400" stroke="#D3C5AB" stroke-width="1.5" />
+        <line x1="840" y1="400" x2="1400" y2="400" stroke="#D3C5AB" stroke-width="1.5" />
+
+        <!-- 7. Monumental Central Cobalt Pathway (Extending to Bottom Foreground) -->
+        <polygon points="650,400 750,400 1140,560 260,560" fill="url(#path-gradient)" />
+        <line x1="700" y1="400" x2="700" y2="560" stroke="#5A88FF" stroke-width="2" stroke-dasharray="10 8" opacity="0.8" />
+        <line x1="680" y1="400" x2="520" y2="560" stroke="#4173F0" stroke-width="1.2" opacity="0.6" />
+        <line x1="720" y1="400" x2="880" y2="560" stroke="#4173F0" stroke-width="1.2" opacity="0.6" />
+        <line x1="660" y1="400" x2="380" y2="560" stroke="#3566E2" stroke-width="1" opacity="0.4" />
+        <line x1="740" y1="400" x2="1020" y2="560" stroke="#3566E2" stroke-width="1" opacity="0.4" />
+
+        <!-- Transverse Gridlines on Cobalt Road -->
+        <line x1="620" y1="435" x2="780" y2="435" stroke="#4B7BFF" stroke-width="0.8" opacity="0.45" />
+        <line x1="570" y1="475" x2="830" y2="475" stroke="#4B7BFF" stroke-width="0.9" opacity="0.5" />
+        <line x1="495" y1="520" x2="905" y2="520" stroke="#4B7BFF" stroke-width="1" opacity="0.55" />
+
+        <!-- 8. Monumental Gateway / Portal Architecture (Rises prominently near top) -->
+        <!-- Outer Gateway Arch Structure -->
+        <path d="M 560 400 V 170 C 560 25 840 25 840 170 V 400 Z" fill="#EFE5D4" stroke="#D1C4AD" stroke-width="2.5" />
+        <!-- Stepped Outer Arch Bevel -->
+        <path d="M 578 400 V 176 C 578 47 822 47 822 176 V 400 Z" fill="#FAF4E8" stroke="#DDD1BC" stroke-width="1.8" />
+        <!-- Inner Glowing Golden Portal -->
+        <path d="M 596 400 V 186 C 596 67 804 67 804 186 V 400 Z" fill="url(#portal-light)" />
+        <!-- Gateway Radiant Ground Halo -->
+        <ellipse cx="700" cy="400" rx="110" ry="16" fill="#FFEAA0" fill-opacity="0.85" />
+
+        <!-- 9. Floating ShadowRoot Security Emblem inside Gateway -->
+        <g transform="translate(668, 145)">
+          <path d="M32 6 L12 14 V30 C12 43.5 20.5 53 32 58 C43.5 53 52 43.5 52 30 V14 L32 6 Z" 
+                fill="#FFF9ED" stroke="#2455D6" stroke-width="4.5" stroke-linejoin="round" />
+          <path d="M32 47 V22" stroke="#2455D6" stroke-width="3.5" stroke-linecap="round" />
+          <path d="M32 34 L22 26" stroke="#2455D6" stroke-width="3" stroke-linecap="round" />
+          <path d="M32 29 L42 22" stroke="#2455D6" stroke-width="3" stroke-linecap="round" />
+          <path d="M32 39 L24 35" stroke="#2455D6" stroke-width="2.5" stroke-linecap="round" />
+          <path d="M32 37 L39 33" stroke="#2455D6" stroke-width="2.5" stroke-linecap="round" />
+          <circle cx="32" cy="18" r="3.2" fill="#FFD447" stroke="#2455D6" stroke-width="1.5" />
+          <circle cx="21" cy="25" r="2.8" fill="#FFD447" stroke="#2455D6" stroke-width="1.5" />
+          <circle cx="43" cy="21" r="2.8" fill="#FFD447" stroke="#2455D6" stroke-width="1.5" />
+          <circle cx="23" cy="35" r="2.2" fill="#FFD447" />
+          <circle cx="40" cy="33" r="2.2" fill="#FFD447" />
+        </g>
+
+        <!-- 10. The Silhouetted Learner at the Threshold -->
+        <g transform="translate(700, 400)">
+          <ellipse cx="0" cy="6" rx="16" ry="4.5" fill="#122A6E" opacity="0.75" />
+          <circle cx="0" cy="-68" r="8" fill="#252A35" />
+          <path d="M -10 -58 Q 0 -62 10 -58 L 12 -35 Q 0 -33 -12 -35 Z" fill="#252A35" />
+          <path d="M -9 -54 C -14 -54 -14 -40 -9 -38 Z" fill="#1D212A" />
+          <path d="M 9 -54 C 14 -54 14 -40 9 -38 Z" fill="#1D212A" />
+          <path d="M -10 -35 L -9 -1 L -2 -1 L -4 -35 Z" fill="#252A35" />
+          <path d="M 4 -35 L 2 -1 L 9 -1 L 10 -35 Z" fill="#252A35" />
+        </g>
+
+        <!-- 11. Floating Label Badges & Connecting Circuit Lines -->
+        <!-- Badge 1: EXPLORE (Upper Left) -->
+        <g class="float-gentle-1">
+          <path d="M 390 137 H 470 C 505 137 525 160 550 180" stroke="#C2B8A3" stroke-width="1.4" fill="none" />
+          <circle cx="550" cy="180" r="3.2" fill="#2455D6" />
+          <g transform="translate(265, 120)">
+            <rect x="0" y="0" width="128" height="36" rx="18" fill="#FFF9ED" stroke="#D8D0C1" stroke-width="1.3" />
+            <circle cx="22" cy="18" r="4.2" fill="#FFD447" />
+            <text x="36" y="22.5" font-family="'Inter', sans-serif" font-size="11.5" font-weight="700" fill="#252A35" letter-spacing="0.16em">EXPLORE</text>
+          </g>
+        </g>
+
+        <!-- Badge 2: LEARN (Lower Left) -->
+        <g class="float-gentle-2">
+          <path d="M 320 282 H 410 C 450 282 470 310 510 330" stroke="#C2B8A3" stroke-width="1.4" fill="none" />
+          <circle cx="510" cy="330" r="3.2" fill="#FFD447" />
+          <g transform="translate(205, 265)">
+            <rect x="0" y="0" width="118" height="36" rx="18" fill="#FFF9ED" stroke="#D8D0C1" stroke-width="1.3" />
+            <circle cx="22" cy="18" r="4.2" fill="#FFD447" />
+            <text x="36" y="22.5" font-family="'Inter', sans-serif" font-size="11.5" font-weight="700" fill="#252A35" letter-spacing="0.16em">LEARN</text>
+          </g>
+        </g>
+
+        <!-- Badge 3: PRACTISE (Upper Right) -->
+        <g class="float-gentle-2">
+          <path d="M 1010 137 H 930 C 895 137 875 160 850 180" stroke="#C2B8A3" stroke-width="1.4" fill="none" />
+          <circle cx="850" cy="180" r="3.2" fill="#2455D6" />
+          <g transform="translate(1010, 120)">
+            <rect x="0" y="0" width="138" height="36" rx="18" fill="#FFF9ED" stroke="#D8D0C1" stroke-width="1.3" />
+            <text x="22" y="22.5" font-family="'Inter', sans-serif" font-size="11.5" font-weight="700" fill="#252A35" letter-spacing="0.16em">PRACTISE</text>
+            <circle cx="118" cy="18" r="4.2" fill="#FFD447" />
+          </g>
+        </g>
+
+        <!-- Badge 4: CHALLENGE (Lower Right) -->
+        <g class="float-gentle-1">
+          <path d="M 1080 282 H 1000 C 960 282 935 310 895 330" stroke="#C2B8A3" stroke-width="1.4" fill="none" />
+          <circle cx="895" cy="330" r="3.2" fill="#FFD447" />
+          <g transform="translate(1080, 265)">
+            <rect x="0" y="0" width="148" height="36" rx="18" fill="#FFF9ED" stroke="#D8D0C1" stroke-width="1.3" />
+            <text x="22" y="22.5" font-family="'Inter', sans-serif" font-size="11.5" font-weight="700" fill="#252A35" letter-spacing="0.16em">CHALLENGE</text>
+            <circle cx="128" cy="18" r="4.2" fill="#FFD447" />
+          </g>
+        </g>
+      </svg>
+    </div>
+  </main>
+
+  <!-- =========================================================================
+       Minimalist Footer
+       ========================================================================= -->
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <div class="footer-brand">
+        ShadowRoot Security
+      </div>
+
+      <div class="footer-auth">
+        <span class="footer-auth-dot" aria-hidden="true">&#9670;</span>
+        <span>Learn responsibly. Test only with authorization.</span>
+      </div>
+
+      <div class="footer-meta">
+        <span>&copy; <span id="copyright-year">2026</span> ShadowRoot Security</span>
+        <span class="footer-domain">shadowrootsecurity.com</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================================================================
+       Interactive Modals (About, Contact, Stay Updated)
+       ========================================================================= -->
+  
+  <!-- 1. Stay Updated / Early Access Modal -->
+  <div class="modal-overlay" id="modal-subscribe" role="dialog" aria-modal="true" aria-labelledby="modal-sub-title" aria-hidden="true">
+    <div class="modal-card">
+      <button type="button" class="modal-close-btn" data-close-modal aria-label="Close dialog">&times;</button>
+      <div class="modal-badge">EARLY ACCESS</div>
+      <h2 id="modal-sub-title" class="modal-title">Stay Updated</h2>
+      <p class="modal-text">
+        Be the first to know when the ShadowRoot Security academy launches, including early lab previews and inaugural CTF challenge releases.
+      </p>
+
+      <form class="modal-form" id="subscribe-form" novalidate>
+        <div class="form-group">
+          <input 
+            type="email" 
+            id="sub-email-input" 
+            class="form-input" 
+            placeholder="Enter your email address" 
+            required 
+            autocomplete="email"
+          >
+          <button type="submit" class="form-submit-btn" id="sub-submit-btn">
+            Notify Me
+          </button>
+        </div>
+        <div id="sub-feedback" class="form-notice" role="status" aria-live="polite"></div>
+      </form>
+      <p class="modal-text-muted" style="margin-top: 1rem;">
+        Zero spam. We respect your inbox and will only reach out for official platform milestones.
+      </p>
+    </div>
+  </div>
+
+  <!-- 2. About Modal -->
+  <div class="modal-overlay" id="modal-about" role="dialog" aria-modal="true" aria-labelledby="modal-about-title" aria-hidden="true">
+    <div class="modal-card">
+      <button type="button" class="modal-close-btn" data-close-modal aria-label="Close dialog">&times;</button>
+      <div class="modal-badge">ABOUT THE INITIATIVE</div>
+      <h2 id="modal-about-title" class="modal-title">Built for the Curious</h2>
+      <p class="modal-text">
+        ShadowRoot Security is an independent cybersecurity education initiative currently in development. Our mission is to make hands-on cybersecurity education accessible, structured, and realistic.
+      </p>
+      <p class="modal-text">
+        From deep protocol inspection to guided defensive sandboxes, learners will explore security concepts, investigate real-world vulnerabilities, and develop practical problem-solving skills in isolated, authorized environments.
+      </p>
+      <p class="modal-text-muted">
+        Academy in active development for public launch.
+      </p>
+    </div>
+  </div>
+
+  <!-- 3. Contact Modal -->
+  <div class="modal-overlay" id="modal-contact" role="dialog" aria-modal="true" aria-labelledby="modal-contact-title" aria-hidden="true">
+    <div class="modal-card">
+      <button type="button" class="modal-close-btn" data-close-modal aria-label="Close dialog">&times;</button>
+      <div class="modal-badge">INQUIRIES</div>
+      <h2 id="modal-contact-title" class="modal-title">Get in Touch</h2>
+      <p class="modal-text">
+        Have questions about ShadowRoot Security, partnership inquiries, or educational interest? Reach our team directly:
+      </p>
+
+      <div class="contact-box">
+        <a href="mailto:contact@ownmanage.in" class="contact-email-val" id="contact-email">contact@ownmanage.in</a>
+        <button type="button" class="copy-btn" id="copy-email-btn">Copy</button>
+      </div>
+
+      <p class="modal-text-muted">
+        All practical training and research initiatives must be conducted with explicit authorization.
+      </p>
+    </div>
+  </div>
+
+</body>
+</html>
